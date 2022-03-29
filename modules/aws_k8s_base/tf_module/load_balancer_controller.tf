@@ -15,6 +15,8 @@ data "aws_iam_policy_document" "load_balancer" {
   statement {
     sid       = "1"
     effect    = "Allow"
+#Ignore 
+#tfsec:ignore:aws-iam-no-policy-wildcards
     resources = ["*"]
 
     actions = [
@@ -107,6 +109,8 @@ data "aws_iam_policy_document" "load_balancer" {
     }
   }
 
+#Ignore 
+#tfsec:ignore:aws-iam-no-policy-wildcards
   statement {
     sid       = "6"
     effect    = "Allow"
@@ -133,6 +137,8 @@ data "aws_iam_policy_document" "load_balancer" {
   statement {
     sid       = "7"
     effect    = "Allow"
+#Ignore 
+#tfsec:ignore:aws-iam-no-policy-wildcards
     resources = ["*"]
 
     actions = [
@@ -151,6 +157,8 @@ data "aws_iam_policy_document" "load_balancer" {
   statement {
     sid       = "8"
     effect    = "Allow"
+#Ignore 
+#tfsec:ignore:aws-iam-no-policy-wildcards
     resources = ["*"]
 
     actions = [
@@ -168,6 +176,8 @@ data "aws_iam_policy_document" "load_balancer" {
   statement {
     sid       = "9"
     effect    = "Allow"
+#Ignore 
+#tfsec:ignore:aws-iam-no-policy-wildcards
     resources = ["*"]
 
     actions = [
@@ -177,7 +187,8 @@ data "aws_iam_policy_document" "load_balancer" {
       "elasticloadbalancing:DeleteRule",
     ]
   }
-
+#Ignore 
+#tfsec:ignore:aws-iam-no-policy-wildcards
   statement {
     sid    = "10"
     effect = "Allow"
