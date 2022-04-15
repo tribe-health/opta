@@ -1,3 +1,4 @@
+from posixpath import expanduser
 from subprocess import CalledProcessError  # nosec
 from typing import FrozenSet, List, Optional
 
@@ -88,7 +89,9 @@ class Helm:
                     "--kube-context",
                     kube_context,
                     "--kubeconfig",
-                    constants.GENERATED_KUBE_CONFIG or KUBE_CONFIG_DEFAULT_LOCATION,
+                    expanduser(
+                        constants.GENERATED_KUBE_CONFIG or KUBE_CONFIG_DEFAULT_LOCATION
+                    ),
                     *namespaces,
                     "-o",
                     "json",
